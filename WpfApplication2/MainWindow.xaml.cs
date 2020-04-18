@@ -19,6 +19,7 @@ namespace WpfApplication2
     using System.Collections.Generic;
 
     using OxyPlot;
+    using OxyPlot.Wpf;
 
     public class MainViewModel
     {
@@ -26,20 +27,39 @@ namespace WpfApplication2
         {
 
 
-            this.Title = "Example 2";
-            int cpt = 0;
-            double a = 40, b = 12;
-
-            for (cpt = 0; cpt < 10; cpt++)
-            {
-                this.Points = new List<DataPoint>
+            this.Title = "Profil Topographique";
+            int cpt = 0;// Pour parcourir la list des intersections
+            int point1 = 1; //Pour cree la liste
+            double x = 40, y = 12;
             
-                              {
-                                  new DataPoint(0, 0),  
-                                  new DataPoint(a, b),
 
-                              };
+
+            /*************************************First Point + creation ***********************************/
+            if (point1 == 1) { 
+            Points = new List<DataPoint>
+            {
+                new DataPoint(x, y),
+            };
+                point1 = 2;
             }
+
+
+            /************************************* The rest of the points ***********************************/
+            for (cpt = 0; cpt < 10; cpt++)//Instead of 10 put the number of intersections -2;
+            {
+               
+                Points.Add(new DataPoint(x, y));
+ 
+            }
+
+            //       this.Points = new List<DataPoint>
+
+            //                     {
+            //                        new DataPoint(0, 0),  
+            //                        new DataPoint(x, y),
+            //                     };
+
+           
 
         }
         
@@ -47,5 +67,6 @@ namespace WpfApplication2
         public string Title { get; private set; }
 
         public IList<DataPoint> Points { get; private set; }
+        public object Plot { get; }
     }
 }
