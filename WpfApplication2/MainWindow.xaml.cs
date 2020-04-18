@@ -27,23 +27,19 @@ namespace WpfApplication2
 
 
             this.Title = "Example 2";
-           // int cpt = 0;
+            int cpt = 0;
             double a = 40, b = 12;
 
-            //for (cpt = 0; cpt < 10; cpt++)
-           // {
+            for (cpt = 0; cpt < 10; cpt++)
+            {
                 this.Points = new List<DataPoint>
             
                               {
-                                  new DataPoint(20, 30),
-                                  new DataPoint(10, 20),
+                                  new DataPoint(0, 0),  
                                   new DataPoint(a, b),
 
                               };
-            
-
-
-          //  }
+            }
 
         }
         
