@@ -30,7 +30,14 @@ namespace WpfApplication2
             this.Title = "Profil Topographique";
             int cpt = 0;// Pour parcourir la list des intersections
             int point1 = 1; //Pour cree la liste
-            double x = 40, y = 12;
+            double x , y ;
+          //  for ()                                     // parcour liste
+
+
+         //   {                                          // debut de parcour
+
+                x = 40; // afectation des x avec echele
+                y = 12; // affectation des altitudes 
             
 
 
@@ -52,14 +59,11 @@ namespace WpfApplication2
  
             }
 
-            //       this.Points = new List<DataPoint>
+            //Suivant de x et y dans la liste .
 
-            //                     {
-            //                        new DataPoint(0, 0),  
-            //                        new DataPoint(x, y),
-            //                     };
+           // }                                           //Fin parcour liste
 
-           
+
 
         }
         
