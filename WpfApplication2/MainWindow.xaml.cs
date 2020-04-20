@@ -25,8 +25,6 @@ namespace WpfApplication2
     {
         public MainViewModel()
         {
-
-
             this.Title = "Profil Topographique";
             int cpt = 0;// Pour parcourir la list des intersections
             int point1 = 1; //Pour cree la liste
@@ -52,25 +50,33 @@ namespace WpfApplication2
 
 
             /************************************* The rest of the points ***********************************/
-            for (cpt = 0; cpt < 10; cpt++)//Instead of 10 put the number of intersections -2;
-            {
+          //  for (cpt = 0; cpt < 10; cpt++)//Instead of 10 put the number of intersections -2;
+         //   {
                
-                Points.Add(new DataPoint(x, y));
- 
-            }
+                Points.Add(new DataPoint(100, 120));
+                Points.Add(new DataPoint(200, 320));
+                Points.Add(new DataPoint(300, 220));
+                Points.Add(new DataPoint(400, 70));
+                Points.Add(new DataPoint(500, 20));
+                Points.Add(new DataPoint(600, 1020));
+
+            //    }
+
+
 
             //Suivant de x et y dans la liste .
 
-           // }                                           //Fin parcour liste
-
+            // }                                           //Fin parcour liste
 
 
         }
+
         
         
         public string Title { get; private set; }
 
         public IList<DataPoint> Points { get; private set; }
-        public object Plot { get; }
+        
+       
     }
 }

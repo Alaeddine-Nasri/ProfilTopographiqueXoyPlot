@@ -3,15 +3,22 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:oxy="http://oxyplot.org/wpf"
         xmlns:local="clr-namespace:WpfApplication2"
-        Title="Example 2 (WPF)" Height="350" Width="525">
+        Title="Example 2 (WPF)" Height="350" Width="688.5">
     <Window.DataContext>
         <local:MainViewModel/>
     </Window.DataContext>
-    <Grid>
-        <oxy:Plot Title="{Binding Title}">
-            <oxy:Plot.Series>
-                <oxy:LineSeries ItemsSource="{Binding Points}"/>
+    <Grid Margin="0,0,73,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="437*"/>
+            <ColumnDefinition Width="80*"/>
+        </Grid.ColumnDefinitions>
+        <oxy:Plot Title="{Binding Title}"  PlotAreaBackground="Black" Grid.ColumnSpan="2" Margin="0,0,10,0" >
+            <oxy:Plot.Series >
+                <oxy:LineSeries   Color="Red" StrokeThickness="2" ItemsSource="{Binding Points}" MarkerFill="Green" 
+                MarkerType="Circle" MarkerSize="4.5" />
             </oxy:Plot.Series>
+
         </oxy:Plot>
+        <Button Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="89,117,-71,0" VerticalAlignment="Top" Width="76"/>
     </Grid>
 </Window>
